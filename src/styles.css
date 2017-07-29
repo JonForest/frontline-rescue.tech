@@ -5,7 +5,7 @@
 }
 
 .login-button {
-	height: 50px;
+	height: 60px;
 	width:320px;
 	background: #000;
 	border-radius: 6px;
@@ -21,8 +21,10 @@ h1 {
 
 
 .btn-std {
+  height: 60px;
+  background: #000;
+  border-radius: 6px;
   color: #fff;
-  background-color: #000;
   border-color: #000;
   margin-right: 10px;
 }

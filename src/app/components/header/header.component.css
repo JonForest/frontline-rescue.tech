@@ -5,16 +5,20 @@
   height:50px;
   background: black;
   color: white;
-  font-weight: bold;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  font-weight: medium;
+  padding: 10px;
+  display: inline-block;
 }
 
-.title {
-  padding-left: 20%;
+.header-text {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
   font-size: 24px;
+  width: calc(100% - 70px);
 }
 
-app-icon  {
-	margin-top: 10px;
+.header-icon  {
+  display: inline-block;
+  vertical-align: middle;
 }

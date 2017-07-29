@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="38px" viewBox="0 0 30 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>mappin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Overview" transform="translate(-12.000000, -576.000000)">
+            <g id="mappin" transform="translate(12.000000, 576.000000)">
+                <ellipse id="Oval" fill="#FFFFFF" cx="15.0000464" cy="14.8841671" rx="11.9388124" ry="11.846582"></ellipse>
+                <path d="M14.9650258,0 C23.230082,0 29.930067,6.64837777 29.930067,14.8495842 C29.930067,17.5452588 29.2062643,20.0731523 27.9410609,22.2521185 C25.3567825,26.7029249 17.1633745,37.7934671 14.9650412,37.870318 C12.7920395,37.9461787 4.42920757,26.6128909 1.87522008,22.0523972 C0.680530675,19.9192379 0,17.4632288 0,14.8496146 C0,6.64840814 6.69996969,3.03758513e-05 14.9650412,3.03758513e-05 L14.9650258,0 Z M14.9650258,3.69283781 C21.1747236,3.69283781 26.208632,8.68787318 26.208632,14.8495842 C26.208632,21.0113105 21.1747083,26.0063307 14.9650258,26.0063307 C8.75532808,26.0063307 3.72141967,21.0112953 3.72141967,14.8495842 C3.72141967,8.68785799 8.75534339,3.69283781 14.9650258,3.69283781 Z" id="Shape" fill="#F06200"></path>
+                <text id="1" font-family="OpenSans-Bold, Open Sans" font-size="16" font-weight="bold" fill="#000000">
+                    <tspan x="10.509375" y="20.8882813">1</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

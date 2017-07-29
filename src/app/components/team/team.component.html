@@ -1,13 +1,13 @@
- <app-header title="Team A"></app-header>
+<app-header title="Team A"></app-header>
 <div *ngFor="let name of names; let i = index" class="name">
   <div class="name-content">
     <div class="contact">
     	<img src="assets/icons/female.svg" alt="Female worker">
     	<div class="name-num">
-		    <div class="name">
+		    <div class="name" style="font-weight:600;">
 		      {{name.name}}
 		    </div>
-		    <div class="num">
+		    <div class="num" style="font-weight:300;">
 		      <img src="assets/icons/phone.svg" alt="phone">
 		      {{name.number}}
 		    </div>

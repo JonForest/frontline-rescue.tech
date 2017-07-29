@@ -21,7 +21,11 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": ["../node_modules/proj4/dist/proj4.js", "../node_modules/proj4leaflet/src/proj4leaflet.js"],
+      "scripts": [
+        "../node_modules/proj4/dist/proj4.js",
+        "../node_modules/proj4leaflet/src/proj4leaflet.js",
+        "../node_modules/lodash/lodash.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

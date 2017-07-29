@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MapService } from 'app/services/map.service';
 declare const L;
 
@@ -9,7 +9,8 @@ declare const L;
 })
 export class MapComponent implements OnInit {
 
-  constructor(private mapService: MapService) { }
+  constructor(private mapService: MapService) {
+  }
 
   ngOnInit() {
     const map = L.map(document.getElementById('map'), {
@@ -21,7 +22,19 @@ export class MapComponent implements OnInit {
 
     this.mapService.getBaseLayers().addTo(map);
     this.mapService.getExtraLayers([5]).addTo(map);
+
+    const extraLayers = this.mapService.getExtraLayers();
+
+    // Initialise the FeatureGroup to store editable layers
+    const drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+
+
+    // Attach a click handler to the map. Find any layer features that are
+    // contained by the users click.
+    map.on('click', (e) => {
+      // Do nothing unless we're in the copy from layer mode.
+      this.mapService.copyFromLayerByLatLng(5, e.latlng, drawnItems, extraLayers);
+    });
   }
-
-
 }

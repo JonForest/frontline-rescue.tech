@@ -24,8 +24,6 @@ export class MapService {
     [-41.5120, 173.94],
     [-41.5119, 173.9401],
   ];
-  private firstArrayLoc = 11;
-  private secArrayLoc = 10;
 
   public secondMove = [
     [-41.5119, 173.9401],

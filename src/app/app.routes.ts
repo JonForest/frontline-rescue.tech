@@ -6,6 +6,7 @@ import { HazardsComponent } from 'app/components/hazards/hazards.component';
 import { ChecklistComponent } from 'app/components/checklist/checklist.component';
 import { TeamComponent } from 'app/components/team/team.component';
 import { PageNotFoundComponent } from 'app/components/page-not-found/page-not-found.component';
+import { AddHazardComponent } from 'app/components/add-hazard/add-hazard.component';
 
 const routes: any = [
   {
@@ -31,6 +32,10 @@ const routes: any = [
   {
     path: 'checklist',
     component: ChecklistComponent
+  },
+  {
+    path: 'add-hazard',
+    component: AddHazardComponent
   }
 ];
 

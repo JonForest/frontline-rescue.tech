@@ -12,6 +12,7 @@ import { CommunicationComponent } from './communication/communication.component'
 import { ChecklistComponent } from './checklist/checklist.component';
 import { HeaderComponent } from './header/header.component';
 import { IconComponent } from 'app/components/icon/icon.component';
+import { AddHazardComponent } from './add-hazard/add-hazard.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { IconComponent } from 'app/components/icon/icon.component';
     ChecklistComponent,
     HeaderComponent,
     IconComponent,
+    AddHazardComponent,
   ],
   exports: [
     MapComponent,
@@ -40,7 +42,8 @@ import { IconComponent } from 'app/components/icon/icon.component';
     ChecklistComponent,
     HeaderComponent,
     IconComponent,
-    HazardsComponent
+    HazardsComponent,
+    AddHazardComponent
   ]
 })
 export class ComponentsModule { }

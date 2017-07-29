@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
   public address;
+  public finishedNav = false;
 
   constructor() {
   }

@@ -32,7 +32,6 @@ export class DiectionsComponent implements OnInit {
   }
 
   done() {
-    debugger
     this.finishedNavEvent.emit(true);
   }
 }

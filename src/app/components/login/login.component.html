@@ -3,7 +3,7 @@
   <label>
     Enter your unique code.
     <br>
-    <input type="text" [formControl]="username"/>
+    <input type="text" [formControl]="username" (keyup.enter)="submit()"/>
   </label>
   <button (click)="submit()">Login!</button>
 </div>

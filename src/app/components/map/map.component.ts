@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { MapService } from 'app/services/map.service';
+import {HttpClient} from '@angular/common/http';
 declare const L;
 
 @Component({
@@ -10,7 +11,8 @@ declare const L;
 export class MapComponent implements OnInit {
   @Output() currentAddress: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor(private mapService: MapService) {
+  constructor(private mapService: MapService,
+              private http: HttpClient) {
   }
 
   ngOnInit() {
@@ -34,6 +36,20 @@ export class MapComponent implements OnInit {
     this.mapService.personMarker.addTo(map);
     this.mapService.hazardMarker.addTo(map);
 
+    this.drawPolysAndMove(map, extraLayers, drawnItems);
+
+
+
+
+    // Attach a click handler to the map. Find any layer features that are
+    // contained by the users click.
+    // map.on('click', (e) => {
+    //   // Do nothing unless we're in the copy from layer mode.
+    //   this.mapService.copyFromLayerByLatLng(5, e.latlng, drawnItems, extraLayers);
+    // });
+  }
+
+  drawPolysAndMove(map, extraLayers, drawnItems) {
     const startLatLng = this.mapService.positionArray[this.mapService.currentPosition];
     map.panTo(startLatLng);
     this.mapService.personMarker.setLatLng(startLatLng);
@@ -53,14 +69,5 @@ export class MapComponent implements OnInit {
       drawnItems.getLayer(layerOne).fire('click', {color: 'green'});
       drawnItems.getLayer(layerTwo).fire('click', {color: 'green'});
     }
-
-
-
-    // Attach a click handler to the map. Find any layer features that are
-    // contained by the users click.
-    // map.on('click', (e) => {
-    //   // Do nothing unless we're in the copy from layer mode.
-    //   this.mapService.copyFromLayerByLatLng(5, e.latlng, drawnItems, extraLayers);
-    // });
   }
 }

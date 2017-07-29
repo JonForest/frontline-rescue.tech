@@ -13,12 +13,15 @@ import { ChecklistComponent } from './checklist/checklist.component';
 import { HeaderComponent } from './header/header.component';
 import { IconComponent } from 'app/components/icon/icon.component';
 import { AddHazardComponent } from './add-hazard/add-hazard.component';
+import {HttpClientModule} from '@angular/common/http';
+import { DiectionsComponent } from './diections/diections.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   declarations: [
     MapComponent,
@@ -32,6 +35,7 @@ import { AddHazardComponent } from './add-hazard/add-hazard.component';
     HeaderComponent,
     IconComponent,
     AddHazardComponent,
+    DiectionsComponent,
   ],
   exports: [
     MapComponent,

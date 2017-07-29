@@ -1,6 +1,9 @@
 import {Injectable} from '@angular/core';
 import { Router } from '@angular/router';
-declare const L, _;
+declare const L, _, proj4;
+
+proj4.defs('NZTM', '+proj=tmerc +lat_0=0 +lon_0=173 +k=0.9996 +x_0=1600000 ' +
+  '+y_0=10000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs');
 
 @Injectable()
 export class MapService {
@@ -15,7 +18,8 @@ export class MapService {
     [-41.5123, 173.9398],
     [-41.5119, 173.9401],
     [-41.5116, 173.9401]
-  ]
+  ];
+  public basePosition = [-41.52, 173.91];
   private mapsBaseUrl = '//maps.marlborough.govt.nz/arcgis/rest/services';
   public firstMove = [
     [-41.5123, 173.9398],
@@ -207,6 +211,15 @@ export class MapService {
         const polygons = this.convertPoints(feature.geometry.coordinates);
 
       });
+  }
+
+  nztmToLatLng (coordinates) {
+    debugger
+    return proj4('NZTM', 'WGS84', coordinates).reverse()
+  }
+
+  latLngToNztm (latlng) {
+    return proj4('WGS84', 'NZTM', [latlng.lng, latlng.lat])
   }
 
   /**

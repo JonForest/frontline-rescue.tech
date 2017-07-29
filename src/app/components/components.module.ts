@@ -10,6 +10,7 @@ import { HazzardsComponent } from './hazzards/hazzards.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 import { HeaderComponent } from './header/header.component';
+import { IconComponent } from 'app/components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
     CommunicationComponent,
     ChecklistComponent,
     HeaderComponent,
+    IconComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +37,7 @@ import { HeaderComponent } from './header/header.component';
     CommunicationComponent,
     ChecklistComponent,
     HeaderComponent,
+    IconComponent,
   ]
 })
 export class ComponentsModule { }

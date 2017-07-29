@@ -2,7 +2,7 @@
 <div class="check-page">
 
   <div class="hazards">
-    <h3>hazards</h3>
+    <h3>Hazards</h3>
     <span *ngFor="let hazard of hazards; let i = index">
       <button class="btn" [class.clicked]="hazard.clicked" (click)="toggleClick(hazard)">{{hazard.title}}</button>
     </span>

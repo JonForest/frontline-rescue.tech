@@ -1,0 +1,61 @@
+.check-page {
+  margin-left: 15px;
+}
+
+.hazzards {
+  line-height: 3.8;
+}
+
+.btn {
+  background: #fff;
+  background-image: -webkit-linear-gradient(top, #fff, #fff);
+  background-image: -moz-linear-gradient(top, #fff, #fff);
+  background-image: -ms-linear-gradient(top, #fff, #fff);
+  background-image: -o-linear-gradient(top, #fff, #fff);
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #BA152A;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  border: solid #BA152A 2px;
+  text-decoration: none;
+}
+
+.btn.fileupload {
+  background: black;
+  border: solid #fff 2px;
+  color: #fff;
+}
+
+.btn.clicked {
+  background: #BA152A;
+  background-image: -webkit-linear-gradient(top, #BA152A, #BA152A);
+  background-image: -moz-linear-gradient(top, #BA152A, #BA152A);
+  background-image: -ms-linear-gradient(top, #BA152A, #BA152A);
+  background-image: -o-linear-gradient(top, #BA152A, #BA152A);
+  background-image: linear-gradient(to bottom, #BA152A, #BA152A);
+  text-decoration: none;
+  color: #fff;
+}
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}

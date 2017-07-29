@@ -1,0 +1,33 @@
+<app-header title="Checklist"></app-header>
+<div class="check-page">
+
+  <div class="hazzards">
+    <h3>Hazzards</h3>
+    <span *ngFor="let hazzard of hazzards; let i = index">
+      <button class="btn" [class.clicked]="hazzard.clicked" (click)="toggleClick(hazzard)">{{hazzard.title}}</button>
+    </span>
+  </div>
+
+  <div class="general">
+    <h3>General</h3>
+    <div *ngFor="let gen of general; let i = index">
+      <label>
+        <input type="checkbox" /> {{gen.title}}
+      </label>
+    </div>
+  </div>
+
+  <div class="assistance">
+    <h3>Flag assistance needed</h3>
+    <span *ngFor="let a of assistance; let i = index">
+      <button class="btn" [class.clicked]="a.clicked" (click)="toggleClick(a)">{{a.title}}</button>
+    </span>
+  </div>
+
+  <h3>Upload assistance</h3>
+
+  <label class="fileContainer btn fileupload">
+    Upload an image!
+    <input class="btn" type="file"  accept="image/*"/>
+  </label>
+</div>

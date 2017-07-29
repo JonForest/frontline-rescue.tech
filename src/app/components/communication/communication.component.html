@@ -1,19 +1,17 @@
 <app-header title="Communication"></app-header>
 <div class="Communication">
-	<div class="text">
-		<p> Team B encountered severe flouding on their way to their first area, so had to take an alternative route. </p>
+
+	<div class="text" *ngFor="let message of messages">
+		<p>{{message.title}}</p>
 		<img class="voice-listening" src="assets/icons/voice.svg" alt="Microphone">
-	</div>
-	<div class="text">
-		<p> Team A have come across June Little from the missings persons list.  </p>
-		<img class="voice-listening" src="assets/icons/voice.svg" alt="Microphone">
-	</div>
+  </div>
+
 	<label class="comment">
 	    COMMENT
 	    <br>
-		<textarea type="text" class="text-box"></textarea>
+		<textarea [formControl]="text" type="text" class="text-box"></textarea>
 	</label>
 	<p class="underlined">VOICE RECORD</p>
 	<img class="voice-recording" src="assets/icons/voice.svg" alt="Voice record">
-	<button class="btn-std btn-disabled">SEND</button>
+	<button class="btn-std btn-disabled" [class.value]="setValueClass()" (click)="postComment()">SEND</button>
 </div>

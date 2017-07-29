@@ -54,7 +54,12 @@ label {
 	position: absolute;
 	bottom: 15px;
 	right: 5px;
-	width: 80px;
+  width: 80px;
+}
+
+.value {
+  background: black;
+  color: #CCC;
 }
 
 textarea {

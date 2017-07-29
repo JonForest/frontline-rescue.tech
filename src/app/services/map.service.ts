@@ -175,7 +175,7 @@ export class MapService {
         // this.renderPoly(moveSet[x-1], extraLayers, drawnItems, layerId)
         drawnItems.getLayer(layerId).fire('click', {latlng: moveSet[x - 1], color: 'blue'});
       }
-    }, 200);
+    }, 500);
   }
 
   public getLayerIdFromPosition(drawnItems, layerPosition) {

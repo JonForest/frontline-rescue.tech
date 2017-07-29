@@ -7,8 +7,9 @@ declare const L;
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  constructor(
-  ) { }
+  private mapsBaseUrl = '//maps.marlborough.govt.nz/arcgis/rest/services';
+
+  constructor() { }
 
   ngOnInit() {
     const map = L.map(document.getElementById('map'), {
@@ -19,6 +20,7 @@ export class MapComponent implements OnInit {
     });
 
     this.getBaseLayers().addTo(map);
+    this.getExtraLayers([5]).addTo(map);
   }
 
 
@@ -50,9 +52,8 @@ export class MapComponent implements OnInit {
   }
 
   getBaseLayers () {
-    const mapsBaseUrl = '//maps.marlborough.govt.nz/arcgis/rest/services';
     const baseLayer = L.tileLayer(
-      `${mapsBaseUrl}/Cache/Basemap/MapServer/tile/{z}/{y}/{x}`,
+      `${this.mapsBaseUrl}/Cache/Basemap/MapServer/tile/{z}/{y}/{x}`,
       {
         'maxZoom': 13,
         'attribution': '',
@@ -61,7 +62,7 @@ export class MapComponent implements OnInit {
       }
     );
     const lowResLayer = L.tileLayer(
-      `${mapsBaseUrl}/Cache/LowResolutionAerialPhotos/MapServer/tile/{z}/{y}/{x}`,
+      `${this.mapsBaseUrl}/Cache/LowResolutionAerialPhotos/MapServer/tile/{z}/{y}/{x}`,
       {
         'maxZoom': 13,
         'attribution': '',
@@ -70,7 +71,7 @@ export class MapComponent implements OnInit {
       }
     );
     const highResLayer = L.tileLayer(
-      `${mapsBaseUrl}/Cache/HighResolutionAerialPhotos/MapServer/tile/{z}/{y}/{x}`,
+      `${this.mapsBaseUrl}/Cache/HighResolutionAerialPhotos/MapServer/tile/{z}/{y}/{x}`,
       {
         'maxZoom': 13,
         'attribution': 'Marlborough District Council',
@@ -82,4 +83,13 @@ export class MapComponent implements OnInit {
     return L.layerGroup([baseLayer, lowResLayer, highResLayer]);
   }
 
+  getExtraLayers (initialLayers = []) {
+    return L.esri.dynamicMapLayer({
+      url: `${this.mapsBaseUrl}/Data/ContextDataPublic/MapServer`,
+      f: 'image',
+      format: 'png32',
+      layers: initialLayers,
+      opacity: 1
+    });
+  }
 }

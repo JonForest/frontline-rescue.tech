@@ -7,11 +7,16 @@ import { ChecklistComponent } from 'app/components/checklist/checklist.component
 import { TeamComponent } from 'app/components/team/team.component';
 import { PageNotFoundComponent } from 'app/components/page-not-found/page-not-found.component';
 import { AddHazardComponent } from 'app/components/add-hazard/add-hazard.component';
+import { DiectionsComponent } from 'app/components/diections/diections.component';
 
 const routes: any = [
   {
     path: '',
     component: LoginComponent
+  },
+  {
+    path: 'directions',
+    component: DiectionsComponent
   },
   {
     path: 'overview',

@@ -1,9 +1,9 @@
 <app-header title="Directions"></app-header>
-<div style="80vh">
-<div *ngFor="let maneuver of maneuvers" class="instruction">
-  <span [innerHTML]="maneuver.instruction"></span>
-</div>
+<div>
+  <div *ngFor="let maneuver of maneuvers" class="instruction">
+    <span [innerHTML]="maneuver.instruction"></span>
+  </div>
 </div>
 <div>
-  <button class="btn btn-std" (click)="done()">Done</button>
+  <button class="btn btn-std" routerLink="/overview">Done</button>
 </div>

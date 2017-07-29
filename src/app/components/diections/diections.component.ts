@@ -30,8 +30,4 @@ export class DiectionsComponent implements OnInit {
       this.maneuvers = data['response'].route[0].leg[0].maneuver;
     });
   }
-
-  done() {
-    this.finishedNavEvent.emit(true);
-  }
 }

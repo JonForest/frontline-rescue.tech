@@ -1,12 +1,8 @@
 <div class="overview-page">
-	<div class="half-screen-map">
-	    <app-map (currentAddress)="setAddress($event)" *ngIf="finishedNav"></app-map>
-			<app-diections (finishedNavEvent)="finishedNav = $event" *ngIf="finishedNav === false"></app-diections>
+	 <div class="half-screen-map">
+	    <app-map (currentAddress)="setAddress($event)"></app-map>
 	</div>
-	    <!-- <div class="top-buttons">
-			<button class="btn btn-std btn-top" routerLink="/team" routerLinkActive="active">TEAM A</button>
-		</div> -->
-  <div class="address" *ngIf="finishedNav">
+  <div class="address">
 	    <div class="address-icon">
 	    	<img class="map-icon" src="assets/icons/mappin1.svg" alt="Destination 1">
 	    </div>

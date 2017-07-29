@@ -19,6 +19,6 @@ export class LoginComponent implements OnInit {
 
 
   submit() {
-    this.router.navigate(['overview']);
+    this.router.navigate(['directions']);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
-declare const H;
+declare const L;
 
 @Component({
   selector: 'app-map',
@@ -10,34 +10,74 @@ export class MapComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    function moveMapToBerlin(map) {
-      map.setCenter({lat: -41.5727, lng: 173.4217});
-      map.setZoom(8);
-    }
-
-    // Step 1: initialize communication with the platform
-    const platform = new H.service.Platform({
-      app_id: '',
-      app_code: '',
-      useCIT: true,
-      useHTTPS: true
+    const map = L.map(document.getElementById('map'), {
+      center: L.latLng(-41.5134, 173.9612),
+      zoom: 10,
+      maxZoom: 11,
+      crs: this.getCrs()
     });
-    const defaultLayers = platform.createDefaultLayers();
 
-    // Step 2: initialize a map  - not specificing a location will give a whole world view.
-    const map = new H.Map(document.getElementById('map'),
-      defaultLayers.normal.map);
+    this.getBaseLayers().addTo(map);
+  }
 
-    // Step 3: make the map interactive
-    // MapEvents enables the event system
-    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
-    const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+  getCrs () {
+    return new L.Proj.CRS('EPSG:2193', // http://epsg.io/2193
+      '+proj=tmerc +lat_0=0 +lon_0=173 +k=0.9996 +x_0=1600000 +y_0=10000000 ' +
+      '+ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs',
+      {
+        origin: [-4020900, 19998100],
+        resolutions: [
+          396.87579375158754,
+          264.5838625010584,
+          132.2919312505292,
+          66.1459656252646,
+          33.0729828126323,
+          26.458386250105836,
+          13.229193125052918,
+          6.614596562526459,
+          2.6458386250105836,
+          1.3229193125052918,
+          0.6614596562526459,
+          0.26458386250105836,
+          0.13229193125052918,
+          0.06614596562526459,
+          0.033072982812632296
+        ]
+      }
+    );
+  }
 
-    // Create the default UI components
-    const ui = H.ui.UI.createDefault(map, defaultLayers);
+  getBaseLayers () {
+    const mapsBaseUrl = '//maps.marlborough.govt.nz/arcgis/rest/services';
+    const baseLayer = L.tileLayer(
+      `${mapsBaseUrl}/Cache/Basemap/MapServer/tile/{z}/{y}/{x}`,
+      {
+        'maxZoom': 13,
+        'attribution': '',
+        'minZoom': 0,
+        'continuousWorld': true
+      }
+    );
+    const lowResLayer = L.tileLayer(
+      `${mapsBaseUrl}/Cache/LowResolutionAerialPhotos/MapServer/tile/{z}/{y}/{x}`,
+      {
+        'maxZoom': 13,
+        'attribution': '',
+        'minZoom': 0,
+        'continuousWorld': true
+      }
+    );
+    const highResLayer = L.tileLayer(
+      `${mapsBaseUrl}/Cache/HighResolutionAerialPhotos/MapServer/tile/{z}/{y}/{x}`,
+      {
+        'maxZoom': 13,
+        'attribution': 'Marlborough District Council',
+        'minZoom': 7,
+        'continuousWorld': true
+      }
+    );
 
-    // Now use the map as required...
-    moveMapToBerlin(map);
+    return L.layerGroup([baseLayer, lowResLayer, highResLayer]);
   }
 
 }

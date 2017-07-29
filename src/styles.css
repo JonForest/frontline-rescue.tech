@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.header {
+    width: 100%;
+    background: #4d80a0;
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+}
+.header:before {
+    content: '<-'
+}

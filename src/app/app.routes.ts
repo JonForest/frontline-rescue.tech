@@ -1,6 +1,9 @@
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from 'app/components/login/login.component';
-import { MapComponent } from 'app/components/map/map.component';
+import { OverviewComponent } from 'app/components/overview/overview.component';
+import { CommunicationComponent } from 'app/components/communication/communication.component';
+import { HazzardsComponent } from 'app/components/hazzards/hazzards.component';
+import { TeamComponent } from 'app/components/team/team.component';
 import { PageNotFoundComponent } from 'app/components/page-not-found/page-not-found.component';
 
 const routes: any = [
@@ -9,9 +12,21 @@ const routes: any = [
     component: LoginComponent
   },
   {
-    path: 'map',
-    component: MapComponent
+    path: 'overview',
+    component: OverviewComponent
   },
+  {
+    path: 'team',
+    component: TeamComponent
+  },
+  {
+    path: 'hazzards',
+    component: HazzardsComponent
+  },
+  {
+    path: 'communication',
+    component: CommunicationComponent
+  }
 ];
 
 

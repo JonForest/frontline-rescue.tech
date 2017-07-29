@@ -3,10 +3,31 @@
   display: block;
   height: 100vh;
   width: 100vw;
+  background-color: #FF6900;
 }
 
 input {
   display: block;
-  border: 1px solid #e3e3e3;
   margin: 0 auto 0;
+  width: 320px;
+  height: 50px;
+  border-radius: 5px;
+  border:none;
+}
+
+h1 {
+	text-align: left;
+	padding-left: 45px;
+}
+
+label {
+	color: #fff;
+	font-weight: 300;
+	text-align: left;
+	padding-top: 25px;
+}
+
+button {
+	margin-top: 25px;
+	margin-left: -5px;
 }

@@ -1,10 +1,13 @@
 <div class="login-page">
-  <h1>Login</h1>
+  <div>
+    <img src="assets/images/login image.jpg" alt="Rescue workers" style="height:310px">
+  </div>	
+  <h1>Frontline Rescue</h1>
   <label>
-    Enter your unique code.
+    TEAM CODE
     <br>
     <input type="text" [formControl]="username" (keyup.enter)="submit()"/>
   </label>
   <br>
-  <button (click)="submit()">Login!</button>
+  <button class="login-button" (click)="submit()">LOG IN</button>
 </div>

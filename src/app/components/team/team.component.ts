@@ -19,6 +19,10 @@ export class TeamComponent implements OnInit {
       name: 'Tim Corbett',
       number: '027 133 4555'
     },
+    {
+      name: 'HQ',
+      number: '0800 112 1198'
+    },
   ];
 
   constructor() { }

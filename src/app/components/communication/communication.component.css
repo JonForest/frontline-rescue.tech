@@ -45,9 +45,7 @@ label {
   display: block;
   margin: 0 auto 0;
   width: 300px;
-  height: 60px;
-  border-radius: 5px;
-  border:1px solid #ccc;
+
 }
 
 .btn-disabled {
@@ -57,6 +55,13 @@ label {
 	bottom: 15px;
 	right: 5px;
 	width: 80px;
+}
+
+textarea {
+	height: 60px;
+	border-radius: 5px;
+	border:1px solid #666;
+	width: 95%;
 }
 
 

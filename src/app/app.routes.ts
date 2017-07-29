@@ -2,7 +2,8 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from 'app/components/login/login.component';
 import { OverviewComponent } from 'app/components/overview/overview.component';
 import { CommunicationComponent } from 'app/components/communication/communication.component';
-import { HazzardsComponent } from 'app/components/hazzards/hazzards.component';
+import { HazardsComponent } from 'app/components/hazards/hazards.component';
+import { ChecklistComponent } from 'app/components/checklist/checklist.component';
 import { TeamComponent } from 'app/components/team/team.component';
 import { PageNotFoundComponent } from 'app/components/page-not-found/page-not-found.component';
 
@@ -20,12 +21,16 @@ const routes: any = [
     component: TeamComponent
   },
   {
-    path: 'hazzards',
-    component: HazzardsComponent
+    path: 'hazards',
+    component: HazardsComponent
   },
   {
     path: 'communication',
     component: CommunicationComponent
+  },
+  {
+    path: 'checklist',
+    component: ChecklistComponent
   }
 ];
 

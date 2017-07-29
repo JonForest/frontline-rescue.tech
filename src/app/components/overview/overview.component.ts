@@ -4,21 +4,30 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-overview',
   template: `
     <div class="half-screen-map">
-      <app-map></app-map>
+      <app-map (currentAddress)="setAddress($event)"></app-map>
     </div>
-    <div class="height: 50%">
-      This is some target info
+    <div class="address">
+      {{address}}
+      <button class="btn pull-right" routerLink="/checklist" routerLinkActive="active">Checklist</button>
     </div>
   `,
   styles: [
-    '.half-screen-map { height: 50%}',
+    '.half-screen-map { height: 645px}',
+    '.address {padding: 15px;}'
   ]
 })
 export class OverviewComponent implements OnInit {
+  public address;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    this.address = '16 Bank Street Blenheim';
+  }
+
+  setAddress(pAddress) {
+    this.address = pAddress;
   }
 
 }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MapComponent } from './map/map.component';
 import { LoginComponent } from './login/login.component';
@@ -6,28 +7,29 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { OverviewComponent } from './overview/overview.component';
 import { TeamComponent } from './team/team.component';
-import { HazzardsComponent } from './hazzards/hazzards.component';
+import { HazardsComponent } from './hazards/hazards.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 import { HeaderComponent } from './header/header.component';
 import { IconComponent } from 'app/components/icon/icon.component';
 
 @NgModule({
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule
+  ],
   declarations: [
     MapComponent,
     LoginComponent,
     PageNotFoundComponent,
     OverviewComponent,
     TeamComponent,
-    HazzardsComponent,
+    HazardsComponent,
     CommunicationComponent,
     ChecklistComponent,
     HeaderComponent,
     IconComponent,
-  ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
   ],
   exports: [
     MapComponent,
@@ -38,6 +40,7 @@ import { IconComponent } from 'app/components/icon/icon.component';
     ChecklistComponent,
     HeaderComponent,
     IconComponent,
+    HazardsComponent
   ]
 })
 export class ComponentsModule { }

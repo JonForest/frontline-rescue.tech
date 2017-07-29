@@ -12,3 +12,11 @@
 span.title {
   text-align: center;
 }
+
+
+.btn-std {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  margin-right: 10px;
+}

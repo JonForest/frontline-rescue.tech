@@ -1,8 +1,17 @@
  <app-header title="Team A"></app-header>
 <div *ngFor="let name of names; let i = index" class="name">
   <div class="name-content">
-    <div class="img">img</div>
-    <div class="name-num">{{name.name}}
-      {{name.number}}</div>
+    <div class="contact">
+    	<img src="assets/icons/female.svg" alt="Female worker">
+    	<div class="name-num">
+		    <div class="name">
+		      {{name.name}}
+		    </div>
+		    <div class="num">
+		      <img src="assets/icons/phone.svg" alt="phone">
+		      {{name.number}}
+		    </div>
+		</div>
+	</div>
   </div>
 </div>

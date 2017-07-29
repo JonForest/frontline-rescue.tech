@@ -1,0 +1,27 @@
+.hazard-icon {
+	padding: 0px 10px 10px 0px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.hazard-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hazard {
+	border-bottom: 1px solid #e1e1e1;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 10px 0;
+}
+
+.hazard-page {
+	width: 100%;
+}
+
+.btn-std {
+	position: absolute;
+	bottom: 20px;
+	right: 5px;
+}

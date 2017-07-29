@@ -5,13 +5,26 @@
   margin-left: 10px;
 }
 
-img {
+.voice-listening {
 	vertical-align: top;
 	display: inline-block;
 	padding: 15px;
-	border: 1px solid #333;
+	border: 1px solid #666;
 	border-radius: 5px;
 	margin-left: 15px;
+}
+
+.voice-recording {
+	position: absolute;
+	bottom: 80px;
+	right: 15px;
+}
+
+.underlined {
+	position: absolute;
+	bottom: 70px;
+	right: 40px;
+	text-decoration: underline;
 }
 
 .text p {
@@ -21,11 +34,29 @@ img {
 	margin-bottom: 0;
 }
 
+label {
+	bottom: 10px;
+	left: 10px;
+	position: absolute;
+	font-weight: 300;
+}
+
 .comment {
   display: block;
   margin: 0 auto 0;
-  width: 320px;
-  height: 50px;
+  width: 300px;
+  height: 60px;
   border-radius: 5px;
   border:1px solid #ccc;
 }
+
+.btn-disabled {
+	background: #CCC;
+	border: #CCC;
+	position: absolute;
+	bottom: 15px;
+	right: 5px;
+	width: 80px;
+}
+
+

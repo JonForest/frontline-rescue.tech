@@ -1,0 +1,27 @@
+ .half-screen-map { 
+ 	height: 645px;
+ }
+ 
+ .address {
+ 	padding: 15px;
+ 	font-weight: bold;
+ 	font-size: 18px;
+ }
+
+ .address-icon {
+ 	display: inline-block;
+ }
+
+ .address-text {
+ 	display: inline-block;
+ 	width: calc(100% - 200px);
+ 	vertical-align: top;
+ }
+
+ .map-icon {
+ 	width: 40px;
+ 	vertical-align: top;
+ 	margin-right: 10px;
+ }
+
+

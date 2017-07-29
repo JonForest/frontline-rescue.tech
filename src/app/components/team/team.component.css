@@ -14,13 +14,17 @@
 
 .name-num {
 	display: inline-block;
+	vertical-align: middle;
 }
 
 img {
 	padding: 0px 10px 10px 0px;
+	vertical-align: top;
+	display: inline-block;
+	color: #CCC;
 }
 
 .name {
 	font-size: 18px;
-	font-weight: 600px;
 }
+

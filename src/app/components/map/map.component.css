@@ -1,0 +1,26 @@
+button {
+  position: absolute;
+  z-index: 1000;
+  height: 50px;
+}
+
+.teamA {
+  background: black;
+  color: white;
+  top: 10px;
+  left: 10px;
+}
+
+.comment {
+  top: 10px;
+  right: 70px;
+  width: 50px;
+  background: #0082D6;
+}
+
+.hazard {
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  background: #BA152A;
+}

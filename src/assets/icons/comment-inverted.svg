@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>comment-text-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Overview2" transform="translate(-252.000000, -24.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Group-7" transform="translate(240.000000, 10.000000)">
+                <g id="comment-text-outline" transform="translate(12.000000, 14.000000)">
+                    <path d="M8.4,24 C7.7372583,24 7.2,23.4627417 7.2,22.8 L7.2,19.2 L2.4,19.2 C1.0745166,19.2 0,18.1254834 0,16.8 L0,2.4 C0,1.068 1.08,0 2.4,0 L21.6,0 C22.9254834,0 24,1.0745166 24,2.4 L24,16.8 C24,18.1254834 22.9254834,19.2 21.6,19.2 L14.28,19.2 L9.84,23.652 C9.6,23.88 9.3,24 9,24 L9,24 L8.4,24 L8.4,24 Z M9.6,16.8 L9.6,20.496 L13.296,16.8 L21.6,16.8 L21.6,2.4 L2.4,2.4 L2.4,16.8 L9.6,16.8 L9.6,16.8 Z M4.8,6 L19.2,6 L19.2,8.4 L4.8,8.4 L4.8,6 L4.8,6 Z M4.8,10.8 L15.6,10.8 L15.6,13.2 L4.8,13.2 L4.8,10.8 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

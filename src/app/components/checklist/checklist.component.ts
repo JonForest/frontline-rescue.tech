@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checklist.component.css']
 })
 export class ChecklistComponent implements OnInit {
-  hazzards = [
+  hazards = [
     {
       title: 'Flooding',
       clicked: false,
@@ -63,7 +63,7 @@ export class ChecklistComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleClick(hazzard) {
-    hazzard.clicked = !hazzard.clicked;
+  toggleClick(hazard) {
+    hazard.clicked = !hazard.clicked;
   }
 }

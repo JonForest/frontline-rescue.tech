@@ -1,10 +1,10 @@
 <app-header title="Checklist"></app-header>
 <div class="check-page">
 
-  <div class="hazzards">
-    <h3>Hazzards</h3>
-    <span *ngFor="let hazzard of hazzards; let i = index">
-      <button class="btn" [class.clicked]="hazzard.clicked" (click)="toggleClick(hazzard)">{{hazzard.title}}</button>
+  <div class="hazards">
+    <h3>hazards</h3>
+    <span *ngFor="let hazard of hazards; let i = index">
+      <button class="btn" [class.clicked]="hazard.clicked" (click)="toggleClick(hazard)">{{hazard.title}}</button>
     </span>
   </div>
 

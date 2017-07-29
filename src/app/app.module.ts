@@ -8,6 +8,7 @@ import { MapComponent } from './components/map/map.component';
 import { appRoutesModule } from 'app/app.routes';
 import { ComponentsModule } from 'app/components/components.module';
 import { LoginComponent } from 'app/components/login/login.component';
+import { PageNotFoundComponent } from 'app/components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [

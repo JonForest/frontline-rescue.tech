@@ -16,7 +16,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   exports: [
     MapComponent,
     LoginComponent,
-    PageNotFoundComponent,
   ]
 })
 export class ComponentsModule { }

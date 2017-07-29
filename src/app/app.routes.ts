@@ -8,6 +8,10 @@ const routes: any = [
     path: '',
     component: LoginComponent
   },
+  {
+    path: 'map',
+    component: MapComponent
+  },
 ];
 
 

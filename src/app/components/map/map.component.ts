@@ -33,17 +33,27 @@ export class MapComponent implements OnInit {
     this.mapService.initPolys(drawnItems);
     this.mapService.personMarker.addTo(map);
     this.mapService.hazardMarker.addTo(map);
-    if (drawnItems.getLayer(106)) {
-      this.mapService.moves(this.mapService.firstMove, map, extraLayers, drawnItems, 106);
-    } else {
-      this.mapService.currentAddress = '343'
-      const startLatLng = this.mapService.firstMove[this.mapService.firstMove.length - 1];
-      map.panTo(startLatLng);
-      this.mapService.personMarker.setLatLng(startLatLng);
-      drawnItems.getLayer(246).fire('click', {latlng: startLatLng, color: 'green'});
-      this.mapService.moves(this.mapService.secondMove, map, extraLayers, drawnItems, 244);
+
+    const startLatLng = this.mapService.positionArray[this.mapService.currentPosition];
+    map.panTo(startLatLng);
+    this.mapService.personMarker.setLatLng(startLatLng);
+
+    this.mapService.currentPosition ++;
+    if (this.mapService.currentPosition === 1) {
+      this.mapService.moves(this.mapService.firstMove, map, extraLayers, drawnItems, 11);
+    } else if (this.mapService.currentPosition === 2) {
+
+      const oldLayerId = this.mapService.getLayerIdFromPosition(drawnItems, 11);
+      drawnItems.getLayer(oldLayerId).fire('click', {color: 'green'});
+      this.mapService.moves(this.mapService.secondMove, map, extraLayers, drawnItems, 10);
       this.currentAddress.emit('18 Bank Street Blenheim');
+    } else {
+      const layerOne = this.mapService.getLayerIdFromPosition(drawnItems, 11);
+      const layerTwo = this.mapService.getLayerIdFromPosition(drawnItems, 10);
+      drawnItems.getLayer(layerOne).fire('click', {color: 'green'});
+      drawnItems.getLayer(layerTwo).fire('click', {color: 'green'});
     }
+
 
 
     // Attach a click handler to the map. Find any layer features that are

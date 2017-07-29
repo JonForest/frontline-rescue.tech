@@ -9,7 +9,13 @@ export class MapService {
   public hazardPoint  = L.latLng(-41.5116, 173.9403);
   public personMarker;
   public hazardMarker;
-  public currentAddress = '16 Bank Street Blenheim';
+  // public currentAddress = '16 Bank Street Blenheim';
+  public currentPosition = 0;
+  public positionArray = [
+    [-41.5123, 173.9398],
+    [-41.5119, 173.9401],
+    [-41.5116, 173.9401]
+  ]
   private mapsBaseUrl = '//maps.marlborough.govt.nz/arcgis/rest/services';
   public firstMove = [
     [-41.5123, 173.9398],
@@ -18,6 +24,8 @@ export class MapService {
     [-41.5120, 173.94],
     [-41.5119, 173.9401],
   ];
+  private firstArrayLoc = 11;
+  private secArrayLoc = 10;
 
   public secondMove = [
     [-41.5119, 173.9401],
@@ -140,7 +148,8 @@ export class MapService {
 
 
 
-  moves(moveSet, map, extraLayers, drawnItems, layerId) {
+  moves(moveSet, map, extraLayers, drawnItems, layerPosition) {
+    const layerId = this.getLayerIdFromPosition(drawnItems, layerPosition);
     let x = 0;
     const run = setInterval(() => {
       if (x < moveSet.length) {
@@ -153,6 +162,19 @@ export class MapService {
         drawnItems.getLayer(layerId).fire('click', {latlng: moveSet[x - 1], color: 'blue'});
       }
     }, 200);
+  }
+
+  public getLayerIdFromPosition(drawnItems, layerPosition) {
+    let count = 0;
+    let layerId = 0;
+    Object.keys(drawnItems._layers).forEach(id => {
+      if (count === layerPosition) {
+        layerId = Number(id);
+      }
+      count++;
+    });
+
+    return layerId;
   }
 
   private convertPoints = (value) => {

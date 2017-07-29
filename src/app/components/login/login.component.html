@@ -1,13 +1,11 @@
 <div class="login-page">
-  <div>
-    <img src="assets/images/login image.jpg" alt="Rescue workers" style="height:310px">
-  </div>	
-  <h1>Frontline Rescue</h1>
-  <label>
-    TEAM CODE
-    <br>
-    <input type="text" [formControl]="username" (keyup.enter)="submit()"/>
-  </label>
-  <br>
+  <div class="banner-image"></div>
+  <div class="page-content">
+    <h1>Frontline Rescue</h1>
+    <label>
+      <span>Team Code</span>
+      <input type="text" [formControl]="username" (keyup.enter)="submit()"/>
+    </label>
   <button class="login-button" (click)="submit()">LOG IN</button>
+  </div>
 </div>

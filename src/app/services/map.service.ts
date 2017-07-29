@@ -40,16 +40,12 @@ export class MapService {
     iconUrl: '/assets/icons/hazard-inverted.svg',
 
     iconSize:     [30, 55], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
   teamIcon = L.icon({
     iconUrl: '/assets/icons/team-inverted.svg',
 
     iconSize:     [30, 55], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
   constructor(private router: Router) {

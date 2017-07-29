@@ -9,6 +9,3 @@
     padding-left: 10px;
 
 }
-.header:before {
-    content: '<-'
-}

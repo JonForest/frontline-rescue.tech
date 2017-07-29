@@ -9,12 +9,9 @@ import { TeamComponent } from './team/team.component';
 import { HazzardsComponent } from './hazzards/hazzards.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ChecklistComponent } from './checklist/checklist.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
-  ],
   declarations: [
     MapComponent,
     LoginComponent,
@@ -24,6 +21,11 @@ import { ChecklistComponent } from './checklist/checklist.component';
     HazzardsComponent,
     CommunicationComponent,
     ChecklistComponent,
+    HeaderComponent,
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     MapComponent,
@@ -31,7 +33,8 @@ import { ChecklistComponent } from './checklist/checklist.component';
     OverviewComponent,
     TeamComponent,
     CommunicationComponent,
-    ChecklistComponent
+    ChecklistComponent,
+    HeaderComponent,
   ]
 })
 export class ComponentsModule { }

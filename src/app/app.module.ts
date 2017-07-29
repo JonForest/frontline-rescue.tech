@@ -13,12 +13,12 @@ import { MapService } from 'app/services/map.service';
     AppComponent,
   ],
   imports: [
+    ComponentsModule,
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
     appRoutesModule,
-    ComponentsModule
   ],
   providers: [
     MapService,

@@ -7,7 +7,8 @@ declare const L;
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
     const map = L.map(document.getElementById('map'), {
@@ -19,6 +20,7 @@ export class MapComponent implements OnInit {
 
     this.getBaseLayers().addTo(map);
   }
+
 
   getCrs () {
     return new L.Proj.CRS('EPSG:2193', // http://epsg.io/2193

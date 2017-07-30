@@ -1,17 +1,19 @@
 <app-header title="Add Hazard"></app-header>
-<div>
-  <h1>Describe the problem</h1>
-  <label for="notes">Describe problem</label>
-  <textarea style="width:100%; height:300px;" id="notes"></textarea>
-</div>
+<div class="add-page">
+  <div>
+    <h1>Describe the problem</h1>
+    <label for="notes">Describe problem</label>
+    <textarea style="width:100%; height:300px;" id="notes"></textarea>
+  </div>
 
-<div class="upload-btn-wrapper">
-  <button class="btn btn-std">Upload a file</button>
-  <input type="file" name="myfile" multiple="false" accept="image/*" id="imageUpload" class="upload"/>
-</div>
+  <div class="upload-btn-wrapper">
+    <button class="btn btn-std">Upload a file</button>
+    <input type="file" name="myfile" multiple="false" accept="image/*" id="imageUpload" class="upload"/>
+  </div>
 
 
-<div>
-  <button class="btn btn-std cancel" routerLink="/hazards" routerLinkActive="active">Cancel</button>
-  <button class="btn btn-std save" routerLink="/hazards" routerLinkActive="active">Save</button>
+  <div>
+    <button class="btn btn-std cancel" routerLink="/hazards" routerLinkActive="active">Cancel</button>
+    <button class="btn btn-std save" routerLink="/hazards" routerLinkActive="active">Save</button>
+  </div>
 </div>

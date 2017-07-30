@@ -54,7 +54,9 @@ export class MapComponent implements OnInit {
     map.panTo(startLatLng);
     this.mapService.personMarker.setLatLng(startLatLng);
 
-    this.mapService.currentPosition ++;
+    if (this.mapService.currentPosition < this.mapService.positionArray.length - 1 ) {
+      this.mapService.currentPosition ++;
+    }
     if (this.mapService.currentPosition === 1) {
       this.mapService.moves(this.mapService.firstMove, map, extraLayers, drawnItems, 11);
     } else if (this.mapService.currentPosition === 2) {

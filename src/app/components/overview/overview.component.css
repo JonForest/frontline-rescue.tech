@@ -1,7 +1,7 @@
- .half-screen-map { 
- 	height: 645px;
+ .half-screen-map {
+ 	height: 85vh;
  }
- 
+
  .address {
  	padding: 15px;
  	font-weight: bold;

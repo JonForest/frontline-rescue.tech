@@ -14,7 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { IconComponent } from 'app/components/icon/icon.component';
 import { AddHazardComponent } from './add-hazard/add-hazard.component';
 import {HttpClientModule} from '@angular/common/http';
-import { DiectionsComponent } from './diections/diections.component';
+import { DirectionsComponent } from './directions/directions.component';
 
 @NgModule({
   imports: [
@@ -35,7 +35,7 @@ import { DiectionsComponent } from './diections/diections.component';
     HeaderComponent,
     IconComponent,
     AddHazardComponent,
-    DiectionsComponent,
+    DirectionsComponent,
   ],
   exports: [
     MapComponent,

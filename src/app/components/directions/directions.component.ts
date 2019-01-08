@@ -3,11 +3,11 @@ import {MapService} from '../../services/map.service';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
-  selector: 'app-diections',
-  templateUrl: './diections.component.html',
-  styleUrls: ['./diections.component.css']
+  selector: 'app-directions',
+  templateUrl: './directions.component.html',
+  styleUrls: ['./directions.component.css']
 })
-export class DiectionsComponent implements OnInit {
+export class DirectionsComponent implements OnInit {
   public maneuvers = [];
   @Output() finishedNavEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
@@ -23,8 +23,8 @@ export class DiectionsComponent implements OnInit {
   calcRoute() {
     const latLngStart = this.mapService.basePosition.join();
     const latLngEnd = this.mapService.positionArray[0].join();
-    const url = 'https://route.cit.api.here.com/routing/7.2/calculateroute.json?app_id=itWl7z9WHWl48Kvv2zYy' +
-      '&app_code=5-PLy-L2QSV1Ff5QBMXVZg&waypoint0=geo!' + latLngStart +
+    const url = 'https://route.api.here.com/routing/7.2/calculateroute.json?app_id=VD7fADcB2g1hc5WoHKvo' +
+      '&app_code=QC5mQVUgcczs3NRtiZcprA&waypoint0=geo!' + latLngStart +
       '&waypoint1=geo!' + latLngEnd + '&mode=fastest;car;traffic:enabled';
     this.http.get(url).subscribe(data => {
       this.maneuvers = data['response'].route[0].leg[0].maneuver;

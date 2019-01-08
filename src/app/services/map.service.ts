@@ -142,14 +142,17 @@ export class MapService {
   }
 
   getArghh() {
-    return L.tileLayer('http://{s}.{base}.maps.cit.api.here.com/maptile/2.1/{type}/{mapID}/{scheme}/{z}/{x}/{y}/{size}/{format}?app_id=itWl7z9WHWl48Kvv2zYy&app_code=5-PLy-L2QSV1Ff5QBMXVZg&lg=en', {
+    return L.tileLayer(
+      // tslint:disable-next-line:max-line-length
+      `http://{s}.{base}.maps.cit.api.here.com/maptile/2.1/{type}/{mapID}/{scheme}/{z}/{x}/{y}/{size}/{format}?app_id=VD7fADcB2g1hc5WoHKvo&app_code=QC5mQVUgcczs3NRtiZcprA&lg=en`,
+      {
       attribution: 'Map &copy; 2016 <a href="http://developer.here.com">HERE</a>',
       subdomains: '1234',
       base: 'base',
       type: 'maptile',
       scheme: 'pedestrian.day',
-      app_id: 'itWl7z9WHWl48Kvv2zYy',
-      app_code: '5-PLy-L2QSV1Ff5QBMXVZg',
+      app_id: 'VD7fADcB2g1hc5WoHKvo',
+      app_code: 'QC5mQVUgcczs3NRtiZcprA',
       mapID: 'newest',
       maxZoom: 20,
       minZoom: 7,
